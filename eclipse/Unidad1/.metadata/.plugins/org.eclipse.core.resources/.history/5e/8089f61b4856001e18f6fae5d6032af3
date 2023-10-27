@@ -1,0 +1,89 @@
+package Prueba;
+
+import java.util.Scanner;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		 Scanner teclado=new Scanner(System.in);
+			
+		
+			
+				 int op1=0;
+				 
+				 System.out.println("OPCIONES CON PRODUTOS");
+				 
+				 do {
+					 System.out.println("1.Coeficientes de una ecuación");
+					 System.out.println("2.Pedir un número entre 0 y 9.999 y decir cuántas cifras tiene");
+					 System.out.println("3.Dime el dia, mes y año de una fecha");
+					 System.out.println("4.Dame un array de numeros");
+					 
+					 op1=Integer.parseInt(teclado.next());
+					 
+					 switch (op1) {
+					 
+					 case 1:
+						 ejercicio1();
+						 
+					 case 2:
+						 cifraNumeros();
+						;
+					 }
+					 
+					 
+				 } while(true);
+				 
+
+			}
+
+	private static void cifraNumeros() {
+		// TODO Auto-generated method stub
+		 Scanner teclado=new Scanner(System.in);
+		 System.out.println("Dime un numero");
+		 
+		 int numero=teclado.nextInt();
+		 
+		 if(numero>0 && numero<10) {
+			  System.out.println("Tiene una cifra");
+		 }
+		 if(numero>9 && numero<99) {
+			 System.out.println("Tiene dos cifras");
+		 }
+		 if(numero>99 && numero<1000) {
+			 System.out.println("Tiene tres cifras");
+		 }
+		 if(numero>1000 && numero<9999) {
+			 System.out.println("tiene cuatro cifras");
+		 }
+		 
+		 
+		}
+
+	private static void ejercicio1() {
+		// TODO Auto-generated method stub
+		 Scanner teclado=new Scanner(System.in);
+		 
+		System.out.println("introduce A");
+		int a=teclado.nextInt();
+		System.out.println("Introduce B");
+		int b=teclado.nextInt();
+		System.out.println("Introduce C");
+		int c=teclado.nextInt();
+		
+		double solucion1=(-b+Math.sqrt(Math.pow(b, 2)-4*a*c)/2*a);
+		double solucion2=(-b-Math.sqrt(Math.pow(b, 2)-4*a*c)/2*a);
+		
+		if(Double.isNaN(solucion1)||Double.isNaN(solucion2)) {
+			System.out.println("no existe");
+		}
+		else {
+			System.out.println(solucion1+" "+solucion2);
+		}
+		
+		
+	}
+	}
+
+
