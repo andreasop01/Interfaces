@@ -207,7 +207,7 @@ public class Formulario extends javax.swing.JDialog {
             Connection con=DriverManager.getConnection("jdbc:mysql://localhost:3306/clase","root","1234");
             con.setAutoCommit(true);
             Statement st=con.createStatement();
-            st.executeUpdate("insert into tareas ()")
+            st.executeUpdate("insert into tareas ()");
             
         } catch (ClassNotFoundException ex) {
             Exceptions.printStackTrace(ex);
