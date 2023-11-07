@@ -14,6 +14,8 @@ import java.io.Serializable;
 import javax.swing.ImageIcon;
 import javax.swing.JPanel;
 import javax.swing.JTextField;
+import javax.swing.event.DocumentEvent;
+import javax.swing.event.DocumentListener;
 
 /**
  *
@@ -22,23 +24,36 @@ import javax.swing.JTextField;
 public class TextFieldColores extends JTextField implements Serializable{
     private Colores fondoytexto;
     private Integer numCaracteres;
+    
 
     public TextFieldColores() {
+        fondoytexto = new Colores(Color.WHITE, Color.BLACK);
+        this.setBackground(fondoytexto.getFondo());
+        this.setForeground(fondoytexto.getTexto());
         
-        this.addKeyListener(new KeyAdapter() {
+        addKeyListener(new KeyAdapter(){
+            @Override
             public void keyReleased(KeyEvent e) {
-                JTextField textField = (JTextField) e.getSource();
-                String text = textField.getText();
-                
-                if (text.length() >= numCaracteres){
-                    textField.setBackground(fondoytexto.getFondo());
-                    textField.setForeground(fondoytexto.getTexto());
+                if (getText().length() >= numCaracteres){
+                    setBackground(fondoytexto.getFondo());
+                    setForeground(fondoytexto.getTexto());
                 } else {
-                    textField.setBackground(Color.white);
-                    textField.setForeground(Color.black);
+                    setBackground(Color.WHITE);
+                    setForeground(Color.BLACK);
                 }
             }
+            
         });
+    }
+    
+    public void actualizarColores(){
+        if(this.getText().length() >= this.numCaracteres){
+            this.setBackground(fondoytexto.getFondo());
+            this.setForeground(fondoytexto.getTexto());
+        } else {
+            this.setBackground(Color.WHITE);
+            this.setForeground(Color.BLACK);
+        }
     }
 
     public Colores getFondoytexto() {
@@ -59,15 +74,7 @@ public class TextFieldColores extends JTextField implements Serializable{
     
     @Override
     protected void paintComponent(Graphics grphcs) {
-        super.paintComponent(grphcs); 
-        
-        if(fondoytexto !=null){
-            Color fondo = fondoytexto.getFondo();
-            Color texto = fondoytexto.getTexto();
-            
-            this.setBackground(Color.white);
-            this.setForeground(Color.black);
-        }
+        super.paintComponent(grphcs);
         
         if (numCaracteres == null){
             numCaracteres = 0;

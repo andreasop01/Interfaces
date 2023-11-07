@@ -26,7 +26,8 @@ public class ColoresPropertyEditor extends PropertyEditorSupport {
 
     @Override
     public String getJavaInitializationString() {
-        return null;
+        Colores c = coloresPanel.getSelectedValue();
+        return "new javaapplication20.pkg1.Colores(new java.awt.Color(" + c.getFondo().getRGB() + "), new java.awt.Color(" + c.getTexto().getRGB() + "))";
     }
 
     @Override

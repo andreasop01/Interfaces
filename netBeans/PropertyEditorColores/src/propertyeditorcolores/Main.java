@@ -27,31 +27,40 @@ public class Main extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        textFieldColoresAndrea1 = new propertyeditorcolores.TextFieldColoresAndrea();
+        textFieldColoresAndrea2 = new propertyeditorcolores.TextFieldColoresAndrea();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        textFieldColoresAndrea1.setText("textFieldColoresAndrea1");
+        textFieldColoresAndrea2.setText("textFieldColoresAndrea2");
+        textFieldColoresAndrea2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                textFieldColoresAndrea2ActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(156, Short.MAX_VALUE)
-                .addComponent(textFieldColoresAndrea1, javax.swing.GroupLayout.PREFERRED_SIZE, 171, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(73, 73, 73))
+            .addGroup(layout.createSequentialGroup()
+                .addGap(94, 94, 94)
+                .addComponent(textFieldColoresAndrea2, javax.swing.GroupLayout.PREFERRED_SIZE, 164, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(142, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addContainerGap(144, Short.MAX_VALUE)
-                .addComponent(textFieldColoresAndrea1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(94, 94, 94))
+                .addContainerGap(153, Short.MAX_VALUE)
+                .addComponent(textFieldColoresAndrea2, javax.swing.GroupLayout.PREFERRED_SIZE, 66, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(81, 81, 81))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void textFieldColoresAndrea2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_textFieldColoresAndrea2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_textFieldColoresAndrea2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -89,6 +98,6 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private propertyeditorcolores.TextFieldColoresAndrea textFieldColoresAndrea1;
+    private propertyeditorcolores.TextFieldColoresAndrea textFieldColoresAndrea2;
     // End of variables declaration//GEN-END:variables
 }

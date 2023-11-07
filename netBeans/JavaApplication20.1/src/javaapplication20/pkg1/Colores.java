@@ -18,6 +18,10 @@ public class Colores implements Serializable{
     public Colores(Color fondo, Color texto) {
         this.fondo = fondo;
         this.texto = texto;
+        
+        
+                
+        System.out.println(fondo + " " + texto);
     }
 
     public Color getFondo() {

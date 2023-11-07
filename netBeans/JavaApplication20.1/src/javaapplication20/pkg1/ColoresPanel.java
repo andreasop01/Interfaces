@@ -19,15 +19,16 @@ public class ColoresPanel extends JPanel implements Serializable {
     /**
      * Creates new form ColoresPanel
      */
-    
+    Color f;
+    Color t;
     
     public ColoresPanel() {
         initComponents();
     }
     
     public Colores getSelectedValue(){
-        Colores c = new Colores(txtFC.getBackground(), txtTC.getBackground());
-        return c;
+        
+        return new Colores(f, t);
     }
 
     /**
@@ -106,12 +107,16 @@ public class ColoresPanel extends JPanel implements Serializable {
         // TODO add your handling code here:
         Color fondo = JColorChooser.showDialog(this, "Seleciona el fondo", Color.WHITE);
         txtFC.setBackground(fondo);
+        f = fondo;
+        System.out.print(f);
     }//GEN-LAST:event_btnFActionPerformed
 
     private void btnTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTActionPerformed
         // TODO add your handling code here:
         Color texto = JColorChooser.showDialog(this, "Seleciona el fondo", Color.WHITE);
         txtTC.setBackground(texto);
+        t = texto;
+        System.out.print(t);
     }//GEN-LAST:event_btnTActionPerformed
 
 
