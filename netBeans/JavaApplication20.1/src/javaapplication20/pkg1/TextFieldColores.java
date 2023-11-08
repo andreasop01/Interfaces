@@ -79,6 +79,10 @@ public class TextFieldColores extends JTextField implements Serializable{
         if (numCaracteres == null){
             numCaracteres = 0;
         }
+        if(fondoytexto!=null){
+            this.setBackground(fondoytexto.getFondo);
+            this.setForeground(fondoytexto.getTexto);
+        }
     }
     
     
