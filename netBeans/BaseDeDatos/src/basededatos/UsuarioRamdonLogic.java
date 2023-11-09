@@ -27,16 +27,18 @@ public class UsuarioRamdonLogic extends SwingWorker{
             Statement st = conn.createStatement();
             String sql="SELECT COUNT(*) FROM usuarios";
             ResultSet rs = st.executeQuery(sql);
-            Random r;  
+            rs.next();
+            int nUsuarios=rs.getInt(1);
+            int nRandom=(int)(Math.random()*nUsuarios);
             
-            if(rs.next()){
-                r=new Random(rs.getInt(0));
-                r.nextInt();
+            ResultSet us=st.executeQuery("select nombre,password,descripcion from usuarios ");
+            for(int i=0; i<nRandom;i++){
+                us.next();
             }
             
-            if(rs.next()){
-                
-            }
+            Usuario u=new Usuario(us.getString(1),us.getString(2),us.getString(3));
+            
+            return u;
         
         
     }

@@ -1,4 +1,4 @@
-package propertyeditorcolores;
+package coloresandrea;
 
 
 import java.awt.Component;
@@ -33,7 +33,7 @@ public class ColoresPropertyEditor extends PropertyEditorSupport {
         Colores c=colorFondoPanel.getSelectedValues();
          
         
-        return "new propertyeditorcolores.Colores(new java.awt.Color("+c.getColorFondo().getRGB()+"),new java.awt.Color("+c.getColorTexto().getRGB()+"))";
+        return "new coloresandrea.Colores(new java.awt.Color("+c.getColorFondo().getRGB()+"),new java.awt.Color("+c.getColorTexto().getRGB()+"))";
         
     }
 

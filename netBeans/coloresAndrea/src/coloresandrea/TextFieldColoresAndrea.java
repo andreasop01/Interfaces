@@ -1,4 +1,4 @@
-package propertyeditorcolores;
+package coloresandrea;
 
 
 import java.awt.Graphics;

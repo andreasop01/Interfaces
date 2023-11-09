@@ -5,15 +5,25 @@
  */
 package basededatos;
 
+import java.awt.Cursor;
 import java.beans.PropertyChangeEvent;
 import java.beans.PropertyChangeListener;
+import java.util.concurrent.CancellationException;
+import java.util.concurrent.ExecutionException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JFrame;
+import javax.swing.SwingWorker;
 
 /**
  *
  * @author Tarde
  */
 public class FormularioInicio extends javax.swing.JFrame implements PropertyChangeListener{
-
+    private Usuario u;
+    private UsuarioRamdonLogic ur;
+    private JFrame padre =this;
+    
     /**
      * Creates new form FormularioInicio
      */
@@ -31,7 +41,7 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
     private void initComponents() {
 
         btnUsuario = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        btnEscribir = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -42,10 +52,10 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
             }
         });
 
-        jButton2.setText("Escribir base de datos");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        btnEscribir.setText("Escribir base de datos");
+        btnEscribir.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                btnEscribirActionPerformed(evt);
             }
         });
 
@@ -57,7 +67,7 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
                 .addGap(41, 41, 41)
                 .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(45, 45, 45)
-                .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btnEscribir, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(59, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
@@ -66,7 +76,7 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
                 .addGap(129, 129, 129)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(btnEscribir, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(134, Short.MAX_VALUE))
         );
 
@@ -75,12 +85,31 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
 
     private void btnUsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnUsuarioActionPerformed
         // TODO add your handling code here:
+        ur=new UsuarioRamdonLogic();
+        ur.addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                if(evt.getNewValue() == SwingWorker.StateValue.DONE){
+                    try {
+                        u=(Usuario)((UsuarioRamdonLogic)evt.getSource()).get();
+                        UsuarioRamdon urn=new UsuarioRamdon(padre,true,u);
+                        urn.setVisible(true);
+                    } catch (InterruptedException ex) {
+                        Logger.getLogger(FormularioInicio.class.getName()).log(Level.SEVERE, null, ex);
+                    } catch (ExecutionException ex) {
+                        Logger.getLogger(FormularioInicio.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            }
+        });
+        ur.execute();
         
     }//GEN-LAST:event_btnUsuarioActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void btnEscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscribirActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton2ActionPerformed
+        
+    }//GEN-LAST:event_btnEscribirActionPerformed
 
     /**
      * @param args the command line arguments
@@ -118,8 +147,8 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnEscribir;
     private javax.swing.JButton btnUsuario;
-    private javax.swing.JButton jButton2;
     // End of variables declaration//GEN-END:variables
 
     @Override
