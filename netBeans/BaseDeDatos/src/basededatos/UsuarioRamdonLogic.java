@@ -36,7 +36,7 @@ public class UsuarioRamdonLogic extends SwingWorker{
                 us.next();
             }
             
-            Usuario u=new Usuario(us.getString(1),us.getString(2),us.getString(3));
+            Usuario u=new Usuario(us.getString(1),us.getString(2),us.getString(3),null,0);
             
             return u;
         

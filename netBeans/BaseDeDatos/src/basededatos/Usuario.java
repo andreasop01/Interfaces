@@ -13,12 +13,33 @@ public class Usuario {
     private String nombre;
     private String password;
     private String descripcion;
+    private int id;
+    private String img;
 
-    public Usuario(String nombre, String password, String descripcion) {
+    public Usuario(String nombre, String password, String descripcion, String img,int id) {
         this.nombre = nombre;
         this.password = password;
         this.descripcion = descripcion;
+        this.img=img;
+        this.id=id;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
+    }
+    
     public Usuario() {
     }
 

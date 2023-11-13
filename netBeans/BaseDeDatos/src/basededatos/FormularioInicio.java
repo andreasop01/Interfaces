@@ -23,6 +23,7 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
     private Usuario u;
     private UsuarioRamdonLogic ur;
     private JFrame padre =this;
+    private WritterLogic wl;
     
     /**
      * Creates new form FormularioInicio
@@ -42,6 +43,8 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
 
         btnUsuario = new javax.swing.JButton();
         btnEscribir = new javax.swing.JButton();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        tbla = new javax.swing.JTable();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -59,25 +62,44 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
             }
         });
 
+        tbla.setModel(new javax.swing.table.DefaultTableModel(
+            new Object [][] {
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null},
+                {null, null, null, null}
+            },
+            new String [] {
+                "Title 1", "Title 2", "Title 3", "Title 4"
+            }
+        ));
+        jScrollPane1.setViewportView(tbla);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(41, 41, 41)
+                .addGap(59, 59, 59)
                 .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(45, 45, 45)
+                .addGap(39, 39, 39)
                 .addComponent(btnEscribir, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(59, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap(38, Short.MAX_VALUE)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 338, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(129, 129, 129)
+                .addGap(39, 39, 39)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(btnUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(btnEscribir, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(134, Short.MAX_VALUE))
+                .addGap(39, 39, 39)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(70, Short.MAX_VALUE))
         );
 
         pack();
@@ -105,9 +127,24 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
         ur.execute();
         
     }//GEN-LAST:event_btnUsuarioActionPerformed
-
+    private void inicializarTabla(){
+        UsuarioTableModle utm=new UsuarioTableModle(UserLogic.getUsers());
+        tbla.setModel(utm);
+        tbla.getColumnModel().getColumn(3).setCellRenderer(new ImgRender());
+    }
+    
     private void btnEscribirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnEscribirActionPerformed
         // TODO add your handling code here:
+        wl=new WritterLogic();
+        wl.addPropertyChangeListener(new PropertyChangeListener() {
+            @Override
+            public void propertyChange(PropertyChangeEvent evt) {
+                if(evt.getNewValue() == SwingWorker.StateValue.DONE){
+                    inicializarTabla();
+                }
+            }
+        });
+        wl.execute();
         
     }//GEN-LAST:event_btnEscribirActionPerformed
 
@@ -149,6 +186,8 @@ public class FormularioInicio extends javax.swing.JFrame implements PropertyChan
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnEscribir;
     private javax.swing.JButton btnUsuario;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTable tbla;
     // End of variables declaration//GEN-END:variables
 
     @Override

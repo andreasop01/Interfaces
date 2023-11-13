@@ -27,9 +27,11 @@ public class WritterLogic extends SwingWorker {
         ResultSet rU=stU.executeQuery("select * from usuarios");
         FileWriter fw=new FileWriter(new File("usuarios.txt"));
         while(rU.next()){
-            fw.write("nombre: "+rU.getString(1)+" contraseña: "+rU.getString(2)+" descripcion: "+rU.getString(3));
-            
+            fw.write("nombre: "+rU.getString(1)+" contraseña: "+rU.getString(2)+" descripcion: "+rU.getString(3)+"\n");
+            UserLogic.addUser(new Usuario(rU.getString(2),rU.getString(3),rU.getString(4),rU.getString(5),rU.getInt(1)));
         }
+        fw.flush();
+        fw.close();
         
         return 1;
         
