@@ -14,7 +14,7 @@ import javax.swing.JButton;
  */
 public class BotonBD extends JButton implements Serializable {
     
-    private boolean cambiante=true;
+    private boolean cambiante;
 
     public boolean isCambiante() {
         return cambiante;
@@ -30,8 +30,7 @@ public class BotonBD extends JButton implements Serializable {
 
     public BotonBD() {
         
-        addActionListener(
-        )
+        
     }
    
     
