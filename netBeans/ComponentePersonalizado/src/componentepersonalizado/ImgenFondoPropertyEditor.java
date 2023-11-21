@@ -13,6 +13,7 @@ import java.beans.PropertyEditorSupport;
  * @author Tarde
  */
 public class ImgenFondoPropertyEditor extends PropertyEditorSupport {
+    //para hacer el componente personalizado
     
     private ImagenFondoPanel imagenFondoPanel=new ImagenFondoPanel();
 

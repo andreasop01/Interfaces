@@ -85,6 +85,8 @@ public class ImagenFondoPanel extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
     public ImagenFondo getSelectedValue(){
+        //opacidad
+        //para el slider getSelectedValue
         File f= new File(jTextField1.getText());
         Float opacidad= jSlider1.getValue()/100f;
         
@@ -93,6 +95,7 @@ public class ImagenFondoPanel extends javax.swing.JFrame {
     
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
+        //escoger la imagen
         JFileChooser jfilechooser= new JFileChooser();
         int resultado = jfilechooser.showOpenDialog(this);
         if(resultado==JFileChooser.APPROVE_OPTION){

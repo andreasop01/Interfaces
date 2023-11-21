@@ -35,6 +35,7 @@ public class  PanelImagen extends JPanel implements Serializable {
 
     @Override
     protected void paintComponent(Graphics g) {
+        //para hacer los cambios hacemos objeto de la clase con las cosas y modificamos 
         super.paintComponent(g); //To change body of generated methods, choose Tools | Templates.
         
         if(rutaImg!=null){ 

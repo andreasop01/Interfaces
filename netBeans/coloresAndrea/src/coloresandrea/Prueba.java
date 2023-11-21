@@ -32,7 +32,7 @@ public class Prueba extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
         textFieldColoresAndrea1.setText("textFieldColoresAndrea1");
-        textFieldColoresAndrea1.setColorFondo(new coloresandrea.Colores(new java.awt.Color(-26266),new java.awt.Color(-10092391)));
+        textFieldColoresAndrea1.setColorFondo(new coloresandrea.Colores(new java.awt.Color(-65485),new java.awt.Color(-1)));
         textFieldColoresAndrea1.setnCaracteres(3);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
