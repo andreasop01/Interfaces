@@ -261,9 +261,9 @@ public class Main extends javax.swing.JFrame {
             
             Statement st=con.createStatement();
             String sql="INSERT INTO usuarios (nombre,password) VALUES('"+ nombre+"', '"+password + "')";
-            ResultSet rs=st.executeQuery(sql);
+            int row=st.executeUpdate(sql);
             
-            if(rs.next()){
+            if(row>0){
                 System.out.println("Registro correcto");
                 jResultado.setText("Registro Correcto");
             }
