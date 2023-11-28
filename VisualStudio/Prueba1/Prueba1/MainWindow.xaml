@@ -23,8 +23,8 @@
         </Grid.ColumnDefinitions>
         <Button x:Name="btn1" Grid.Column="2" Content="Pulsamé Hola" HorizontalAlignment="Left" Margin="234,61,0,0" VerticalAlignment="Top" Height="47" Width="152" Click="Button_Click" FontStretch="ExtraExpanded" FontSize="20" FontWeight="Bold"/>
         <Label x:Name="l1" Grid.Column="2" Content="  Hola Mundo" HorizontalAlignment="Left" Margin="231,17,0,0" VerticalAlignment="Top" Height="35" Width="161" FontSize="20" FontWeight="Bold" FontStyle="Italic"/>
-        <ComboBox x:Name="personaCombo" Grid.Column="2" HorizontalAlignment="Left" Margin="254,127,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="personaCombo_SelectionChanged"/>
-        <ListBox x:Name="comboListPersona" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,158,137,206"/>
+        <ComboBox x:Name="personaCombo" ItemsSource="{Binding Path=listPersona}" Grid.Column="2" HorizontalAlignment="Left" Margin="254,127,0,0" VerticalAlignment="Top" Width="120" SelectionChanged="personaCombo_SelectionChanged"/>
+        <ListBox x:Name="comboListPersona"  ItemsSource="{Binding Path=listPersona}" Grid.Column="2" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="174,158,137,206"/>
         <Rectangle Grid.Column="2" HorizontalAlignment="Left" Height="68" Margin="97,236,0,0" Stroke="Black" VerticalAlignment="Top" Width="467"/>
         <Label x:Name="lNombre" Grid.Column="2" Content="Nombre" HorizontalAlignment="Left" Margin="160,252,0,0" VerticalAlignment="Top" Height="39" Width="84"/>
         <Label x:Name="lApellido" Grid.Column="2" Content="Apellido" HorizontalAlignment="Left" Margin="428,254,0,0" VerticalAlignment="Top"/>

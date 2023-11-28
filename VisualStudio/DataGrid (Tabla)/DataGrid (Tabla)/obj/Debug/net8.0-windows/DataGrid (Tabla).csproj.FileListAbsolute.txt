@@ -1,0 +1,21 @@
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\bin\Debug\net8.0-windows\DataGrid (Tabla).exe
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\bin\Debug\net8.0-windows\DataGrid (Tabla).deps.json
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\bin\Debug\net8.0-windows\DataGrid (Tabla).runtimeconfig.json
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\bin\Debug\net8.0-windows\DataGrid (Tabla).dll
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\bin\Debug\net8.0-windows\DataGrid (Tabla).pdb
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla)_MarkupCompile.cache
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla)_MarkupCompile.lref
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).g.resources
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).AssemblyInfoInputs.cache
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).AssemblyInfo.cs
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).csproj.CoreCompileInputs.cache
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).sourcelink.json
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).dll
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\refint\DataGrid (Tabla).dll
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).pdb
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\DataGrid (Tabla).genruntimeconfig.cache
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\DataGrid (Tabla)\DataGrid (Tabla)\obj\Debug\net8.0-windows\ref\DataGrid (Tabla).dll

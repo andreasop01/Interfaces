@@ -1,4 +1,5 @@
 ﻿using Prueba1.dto;
+using System.Collections.ObjectModel;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -17,24 +18,14 @@ namespace Prueba1
     /// </summary>
     public partial class MainWindow : Window
     {
+        public ObservableCollection<Persona> listPersona {  get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            List<Persona> listPersona = new List<Persona>();
+            listPersona = new ObservableCollection<Persona>();
             listPersona.Add(new Persona("Alejandro","Sanz"));
             listPersona.Add(new Persona("Antonio", "Bandera"));
-
-            foreach (Persona p in listPersona)
-            {
-                ComboBoxItem item = new ComboBoxItem();
-                item.Content = p;
-                personaCombo.Items.Add(item);
-
-                ListBoxItem listBoxItem = new ListBoxItem();
-                listBoxItem.Content = p;
-                comboListPersona.Items.Add(listBoxItem);
-                
-            }
+            this.DataContext = this;
 
         }
 

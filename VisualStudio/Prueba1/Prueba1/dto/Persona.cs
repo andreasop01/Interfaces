@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Prueba1.dto
 {
-   class Persona
+   public class Persona
     {
         public String nombre { get; set; }
         public string apellido{ get; set; }
