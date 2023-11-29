@@ -12,6 +12,7 @@
         <TextBox x:Name="txtApe" HorizontalAlignment="Left" Margin="494,217,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="135" Height="31"/>
         <Button x:Name="btnAgregar" Content="Agregar" HorizontalAlignment="Left" Margin="494,287,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.123,-0.954" Height="40" Width="135" Click="btnAgregar_Click"/>
         <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="494,86,0,0" VerticalAlignment="Top" Height="38" Width="135" Click="btnBorrar_Click"/>
+        <Button x:Name="btnActualiza" Content="Actualizar" HorizontalAlignment="Left" Margin="494,355,0,0" VerticalAlignment="Top" Height="41" Width="135" Click="Button_Click"/>
 
     </Grid>
 </Window>

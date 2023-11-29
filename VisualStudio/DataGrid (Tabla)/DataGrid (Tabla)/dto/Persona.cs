@@ -1,15 +1,47 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Specialized;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace DataGrid__Tabla_.dto
 {
-   public class Persona
+   public class Persona : INotifyPropertyChanged
+
+
     {
-        public String nombre { get; set; }
-        public string apellido{ get; set; }
+        public String Nombre
+        {
+            get
+            {
+                return nombre;
+            }
+            set
+            {
+                this.nombre = value;
+                this.PropertyChanged(this,new PropertyChangedEventArgs("nombre"));
+            }
+        }
+
+        public String Apellido
+        {
+            get
+            {
+                return apellido;
+            }
+            set
+            {
+                this.apellido = value;
+                this.PropertyChanged(this, new PropertyChangedEventArgs("apellido"));
+            }
+        }
+
+
+
+        private String nombre;
+        private string apellido;
 
         public Persona(String nombre, string apellido)
         {
@@ -17,6 +49,7 @@ namespace DataGrid__Tabla_.dto
             this.apellido = apellido;
         }
 
+        public event PropertyChangedEventHandler? PropertyChanged;
 
         public override string ToString()
         {

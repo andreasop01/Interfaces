@@ -49,5 +49,18 @@ namespace DataGrid__Tabla_
             int fila=tabla.SelectedIndex;
             listaPersona.RemoveAt(fila);
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            int fila = tabla.SelectedIndex;
+
+            TextBox txtNombre1 = (TextBox)txtNombre;
+            TextBox txtApe1 = (TextBox)txtApe;
+
+            listaPersona.ElementAt(fila).Nombre = txtNombre1.Text;
+            listaPersona.ElementAt(fila).Apellido = txtApe1.Text;
+
+
+        }
     }
 }
