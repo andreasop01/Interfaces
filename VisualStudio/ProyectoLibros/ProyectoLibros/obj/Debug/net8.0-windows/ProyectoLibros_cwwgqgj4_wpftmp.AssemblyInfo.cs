@@ -11,12 +11,12 @@
 using System;
 using System.Reflection;
 
-[assembly: System.Reflection.AssemblyCompanyAttribute("DataGrid (Tabla)")]
+[assembly: System.Reflection.AssemblyCompanyAttribute("ProyectoLibros")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
-[assembly: System.Reflection.AssemblyProductAttribute("DataGrid (Tabla)")]
-[assembly: System.Reflection.AssemblyTitleAttribute("DataGrid (Tabla)")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4ad2ff59611cfeeefb10e1f579f37ea5266a4dc")]
+[assembly: System.Reflection.AssemblyProductAttribute("ProyectoLibros")]
+[assembly: System.Reflection.AssemblyTitleAttribute("ProyectoLibros")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
 [assembly: System.Runtime.Versioning.TargetPlatformAttribute("Windows7.0")]
 [assembly: System.Runtime.Versioning.SupportedOSPlatformAttribute("Windows7.0")]
