@@ -6,27 +6,21 @@
         xmlns:local="clr-namespace:ProyectoLibros"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid Margin="0,0,0,275">
+    <Grid Margin="0,0,0,26">
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
         </Grid.RowDefinitions>
 
-        <Menu Margin="0,0,0,100">
-            <MenuItem Header="Crear" Click="MenuItem_Click" FontWeight="Bold" Height="53" Width="95">
-                <MenuItem Header="Libros" FontWeight="Bold" Click="MenuItem_Click_1"/>
+
+        <Menu Margin="0,0,0,393">
+            <MenuItem x:Name="btnCrear" Header="Crear" Height="35" Width="82" FontSize="20" FontWeight="Bold">
+                <MenuItem x:Name="btnJuego" Header="Libro" Click="MenuItem_Click_1"/>
             </MenuItem>
         </Menu>
-        <DataGrid x:Name="tablaLibros" d:ItemsSource="{d:SampleData ItemCount=5}" RenderTransformOrigin="0.5,0.5" Grid.Row="1" Margin="355,59,-202,-206">
-            <DataGrid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform AngleX="0.875"/>
-                    <RotateTransform Angle="0.245"/>
-                    <TranslateTransform X="-281.569" Y="-1.193"/>
-                </TransformGroup>
-            </DataGrid.RenderTransform>
-        </DataGrid>
+        <DataGrid x:Name="tablaLibros" ItemsSource="{Binding Path=listaLibros}" Margin="0,72,0,72" AutoGenerateColumns="True"/>
+        <Button Content="Modificar" HorizontalAlignment="Left" Margin="675,375,0,0" VerticalAlignment="Top" Width="115" Click="Button_Click"/>
+
 
     </Grid>
 </Window>

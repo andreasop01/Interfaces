@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ProyectoLibros.dto
 {
-    public class Libros : INotifyPropertyChanged
+    public class Libros : INotifyPropertyChanged,ICloneable,IDataErrorInfo
 
     {
         public DateTime Fecha
@@ -48,7 +48,33 @@ namespace ProyectoLibros.dto
             }
         }
 
+        public string Error {
+            get { return ""; }
+        }
 
+        public string this[string columnName]
+        {
+            get
+            {
+                string resultado = "";
+                if (columnName == "Titulo")
+                {
+                    if (string.IsNullOrEmpty(titulo))
+                    {
+                        resultado = "debe tener un titulo";
+                    }
+                }
+
+                if (columnName == "Autor")
+                {
+                    if (string.IsNullOrEmpty(autor))
+                    {
+                        resultado = "Debe tener un autor";
+                    }
+                }
+                return resultado;
+            }
+        }
 
         private String autor;
         private string titulo;
@@ -74,5 +100,9 @@ namespace ProyectoLibros.dto
             return autor + " " + titulo;
         }
 
+        public object Clone()
+        {
+           return this.MemberwiseClone();
+        }
     }
 }

@@ -19,3 +19,5 @@ C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\
 C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\obj\Debug\net8.0-windows\ProyectoLibros.pdb
 C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\obj\Debug\net8.0-windows\ProyectoLibros.genruntimeconfig.cache
 C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\obj\Debug\net8.0-windows\ref\ProyectoLibros.dll
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\obj\Debug\net8.0-windows\DialogoLibro.g.cs
+C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\obj\Debug\net8.0-windows\DialogoLibro.baml

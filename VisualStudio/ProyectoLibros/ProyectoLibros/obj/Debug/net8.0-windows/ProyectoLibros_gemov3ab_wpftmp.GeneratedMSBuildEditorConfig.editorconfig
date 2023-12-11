@@ -1,0 +1,13 @@
+is_global = true
+build_property.TargetFramework = net8.0-windows
+build_property.TargetPlatformMinVersion = 7.0
+build_property.UsingMicrosoftNETSdkWeb = 
+build_property.ProjectTypeGuids = 
+build_property.InvariantGlobalization = 
+build_property.PlatformNeutralAssembly = 
+build_property.EnforceExtendedAnalyzerRules = 
+build_property._SupportedPlatformList = Linux,macOS,Windows
+build_property.RootNamespace = ProyectoLibros_gemov3ab_wpftmp
+build_property.ProjectDir = C:\Users\Tarde.12_b21_ribera.000\Desktop\Interfaces\VisualStudio\ProyectoLibros\ProyectoLibros\
+build_property.EnableComHosting = 
+build_property.EnableGeneratedComInterfaceComImportInterop = 

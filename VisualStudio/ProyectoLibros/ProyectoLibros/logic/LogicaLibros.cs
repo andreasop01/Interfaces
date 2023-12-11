@@ -17,14 +17,19 @@ namespace ProyectoLibros.logic
         public LogicaLibros() { 
             listaLibros=new ObservableCollection<dto.Libros>();
 
-            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1, 5, 1995)));
-            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1, 5, 1995)));
-            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1, 5, 1995)));
+            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1995,5,1)));
+            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1995,5,1)));
+            listaLibros.Add(new Libros("El señor de los anillos", "xxxx", new DateTime(1995,5,1)));
         }
 
         public void nuevoLibro(Libros l)
         {
             listaLibros.Add(l);
+        }
+
+        public void modificarLibro(Libros l,int posicion)
+        {
+            listaLibros[posicion] = l;
         }
     }
 }
