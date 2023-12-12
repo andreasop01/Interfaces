@@ -31,5 +31,7 @@ namespace ProyectoLibros.logic
         {
             listaLibros[posicion] = l;
         }
+        
     }
 }
+    

@@ -44,7 +44,7 @@ namespace ProyectoLibros
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             if(tablaLibros.SelectedIndex ==-1) {
-                MessageBox.Show("eleciona un libro");
+                MessageBox.Show("Seleciona un libro");
                 return;
             }
             Libros libros=(Libros) tablaLibros.SelectedItem;
@@ -53,4 +53,4 @@ namespace ProyectoLibros
             dialogo.Show();
         }
     }
-}
+}   

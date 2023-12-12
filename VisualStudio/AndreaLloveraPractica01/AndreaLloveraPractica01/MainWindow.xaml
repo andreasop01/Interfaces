@@ -1,0 +1,30 @@
+﻿<Window x:Class="AndreaLloveraPractica01.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:AndreaLloveraPractica01"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <Menu Margin="0,0,0,373">
+            
+            <MenuItem Header="Crear Empleado" Height="36" Width="154" FontWeight="Bold" FontSize="18" Click="MenuItem_Click">
+                <MenuItem Header="CrearEmpleado"/>
+            </MenuItem>
+        </Menu>
+        <DataGrid x:Name="tablaEmple" ItemsSource="{Binding Path=listaEmpleados}" Margin="135,110,168,94" AutoGenerateColumns="false">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Nombre" Binding="{Binding Path=Nombre}"/>
+                <DataGridTextColumn Header="Apellido" Binding="{Binding Path=Apellido}"/>
+                <DataGridTextColumn Header="Puesto" Binding="{Binding Path=Puesto}"/>
+                <DataGridCheckBoxColumn Header="Alta" Binding="{Binding Path=Alta}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+    </Grid>
+</Window>
