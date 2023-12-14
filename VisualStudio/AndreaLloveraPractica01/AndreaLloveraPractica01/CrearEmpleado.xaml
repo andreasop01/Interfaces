@@ -6,17 +6,20 @@
         xmlns:local="clr-namespace:AndreaLloveraPractica01"
         mc:Ignorable="d"
         Title="CrearEmpleado" Height="450" Width="800">
-    <Grid x:Name="btnCrear">
+    <Grid x:Name="grid">
         <Label Content="Nombre" HorizontalAlignment="Left" Margin="165,113,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Apellido" HorizontalAlignment="Left" Margin="165,155,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
         <Label Content="Puesto" HorizontalAlignment="Left" Margin="165,0,0,0" VerticalAlignment="Center" FontWeight="Bold"/>
         <Label Content="Alta" HorizontalAlignment="Left" Margin="165,256,0,0" VerticalAlignment="Top" FontWeight="Bold"/>
-        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="247,121,0,0" TextWrapping="Wrap" Text="{Binding Path=Nombre}" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtApellido" HorizontalAlignment="Left" Margin="247,155,0,0" TextWrapping="Wrap" Text="{Binding Path=Apellido}" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtPuesto" HorizontalAlignment="Left" Margin="247,212,0,0" TextWrapping="Wrap" Text="{Binding Path=Puesto}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtNombre" HorizontalAlignment="Left" Margin="247,121,0,0" TextWrapping="Wrap" Validation.Error="Validation_Error" Text="{Binding Path=Nombre,NotifyOnValidationError=True,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtApellido" HorizontalAlignment="Left" Margin="247,155,0,0" TextWrapping="Wrap" Validation.Error="Validation_Error" Text="{Binding Path=Apellido,NotifyOnValidationError=True,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="txtPuesto" HorizontalAlignment="Left" Margin="247,204,0,0" TextWrapping="Wrap" Validation.Error="Validation_Error" Text="{Binding Path=PuestoEmpleo,NotifyOnValidationError=True,ValidatesOnDataErrors=True}" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="checkAlta" Content="" HorizontalAlignment="Left" Margin="247,262,0,0" IsChecked="{Binding Path=Alta}" VerticalAlignment="Top"/>
-        <Button Content="Crear" HorizontalAlignment="Left" Margin="162,330,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
-        <Button Content="Cancelar" HorizontalAlignment="Center" Margin="0,328,0,0" VerticalAlignment="Top" Height="32" Width="102" Click="Button_Click_1"/>
+        <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="165,359,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
+        <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="32" Width="102" Click="Button_Click_1"/>
+        <Button Content="Selecciona una Imagen" HorizontalAlignment="Left" Margin="144,302,0,0" VerticalAlignment="Top" Height="30" Width="163" Click="Button_Click_2"/>
+        <TextBox x:Name="txtImg" HorizontalAlignment="Left" Margin="337,302,0,0" TextWrapping="Wrap" Text="{Binding Path=RutaImg,NotifyOnValidationError=True,ValidatesOnDataErrors=True }" VerticalAlignment="Top" Width="204" Height="24" RenderTransformOrigin="0.47,0.097"/>
+        <Image x:Name="imgT" HorizontalAlignment="Left" Height="100" Margin="623,256,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Window>

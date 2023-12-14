@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace AndreaLloveraPractica01.dto
 {
-    public class Empleados: INotifyPropertyChanged
+    public class Empleados: INotifyPropertyChanged, ICloneable, IDataErrorInfo
     {
         private String nombre;
         private String apellido;
@@ -63,6 +63,53 @@ namespace AndreaLloveraPractica01.dto
             }
         }
 
+        public string Error
+        {
+            get { return ""; }
+        }
+           
+
+        public string this[string columnName]
+        {
+            get
+            {
+                string resultado = "";
+                if (columnName == "Nombre")
+                {
+                    if (string.IsNullOrEmpty(nombre))
+                    {
+                        resultado = "debe tener un nombre";
+                    }
+                }
+
+                if (columnName == "Apellido")
+                {
+                    if (string.IsNullOrEmpty(apellido))
+                    {
+                        resultado = "Debe tener un apellido";
+                    }
+                }
+
+                if (columnName == "PuestoEmpleo")
+                {
+                    if (string.IsNullOrEmpty(puestoEmpleo))
+                    {
+                        resultado = "Debe tener un Puesto Empleo";
+                    }
+                }
+
+                if (columnName == "RutaImg")
+                {
+                    if (string.IsNullOrEmpty(rutaImg))
+                    {
+                        resultado = "Debe tener un RutaImg";
+                    }
+                }
+
+                return resultado;
+            }
+        }
+
         public Empleados(String nombre, String apellido, String puestoEmpleo, bool alta, String rutaImg)
         {
             this.nombre = nombre;
@@ -74,7 +121,11 @@ namespace AndreaLloveraPractica01.dto
 
         public Empleados()
         {
-           
+            this.nombre = "";
+            this.apellido = "";
+            this.puestoEmpleo = "";
+            this.alta = false;
+            this.rutaImg = "";
         }
 
 
@@ -82,6 +133,10 @@ namespace AndreaLloveraPractica01.dto
         {
             return nombre + " " + apellido + " " + puestoEmpleo + " " + alta + " " + rutaImg;
         }
-    
+
+        public object Clone()
+        {
+            throw new NotImplementedException();
+        }
     }
 }
