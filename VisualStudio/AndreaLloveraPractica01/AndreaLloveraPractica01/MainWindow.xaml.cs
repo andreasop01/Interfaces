@@ -1,4 +1,5 @@
-﻿using AndreaLloveraPractica01.logic;
+﻿using AndreaLloveraPractica01.dto;
+using AndreaLloveraPractica01.logic;
 using System.Text;
 using System.Windows;
 using System.Windows.Controls;
@@ -34,6 +35,32 @@ namespace AndreaLloveraPractica01
         public void TablaEmple_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+        }
+
+        private void btnModi_Click(object sender, RoutedEventArgs e)
+        {
+
+            if (tablaEmple.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleciona un libro");
+                return;
+            }
+            Empleados emple = (Empleados)tablaEmple.SelectedItem;
+            int posicion = tablaEmple.SelectedIndex;
+            CrearEmpleado crearE = new CrearEmpleado(logicaEmpleado, (Empleados)emple.Clone(), posicion);
+            crearE.Show();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(tablaEmple.SelectedIndex == -1)
+            {
+                MessageBox.Show("Seleciona un Empleado");
+                return;
+            }
+            
+            logicaEmpleado.listaEmpleados.RemoveAt(tablaEmple.SelectedIndex);
+    
         }
     }
 }

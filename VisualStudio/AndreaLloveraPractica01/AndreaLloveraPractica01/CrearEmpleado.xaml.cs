@@ -27,6 +27,8 @@ namespace AndreaLloveraPractica01
         private LogicaEmpleado logicaEmpleado;
         private Empleados empleados;
         private int error = 0;
+        private int posicion;
+        private bool modificar = false;
 
         public CrearEmpleado(LogicaEmpleado e)
         {
@@ -36,6 +38,16 @@ namespace AndreaLloveraPractica01
             this.DataContext = empleados;
         }
 
+        public CrearEmpleado(LogicaEmpleado e,Empleados emple,int posi)
+        {
+            InitializeComponent();
+            this.logicaEmpleado = e;
+            this.empleados = emple;
+            this.DataContext = empleados;
+            this.posicion = posi;
+            this.modificar = true;
+        }
+
         public CrearEmpleado()
         {
             InitializeComponent();
@@ -43,7 +55,15 @@ namespace AndreaLloveraPractica01
         }
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            this.logicaEmpleado.agregarEmpleado(empleados);
+            if (modificar)
+            {
+                this.logicaEmpleado.modificarEmpleado(this.empleados, this.posicion); 
+            }
+            else
+            {
+                this.logicaEmpleado.agregarEmpleado(this.empleados);
+            }
+
             this.Close();
         }
 
@@ -79,7 +99,7 @@ namespace AndreaLloveraPractica01
             {
                 txtImg.Text = openFileDialog.FileName;
                 imgT.Source = new BitmapImage(new Uri(openFileDialog.FileName));
-
+                this.empleados.RutaImg = openFileDialog.FileName;
             }
                
         }

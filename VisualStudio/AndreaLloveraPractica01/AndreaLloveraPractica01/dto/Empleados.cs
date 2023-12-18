@@ -136,7 +136,7 @@ namespace AndreaLloveraPractica01.dto
 
         public object Clone()
         {
-            throw new NotImplementedException();
+            return this.MemberwiseClone();
         }
     }
 }

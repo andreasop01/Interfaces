@@ -25,5 +25,10 @@ namespace AndreaLloveraPractica01.logic
             listaEmpleados.Add(e);
         }
 
+        public void modificarEmpleado(Empleados e, int posicion)
+        {
+            listaEmpleados[posicion] = e;
+        }
+
     }
 }

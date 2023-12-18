@@ -12,7 +12,7 @@
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
         <Menu Margin="0,0,0,373">
-            
+
             <MenuItem Header="Crear Empleado" Height="36" Width="154" FontWeight="Bold" FontSize="18" Click="MenuItem_Click">
                 <MenuItem Header="CrearEmpleado"/>
             </MenuItem>
@@ -25,6 +25,8 @@
                 <DataGridCheckBoxColumn Header="Alta" Binding="{Binding Path=Alta}"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="btnModi" Content="Modificar" HorizontalAlignment="Left" Margin="336,344,0,0" VerticalAlignment="Top" Height="25" Width="96" Click="btnModi_Click"/>
+        <Button x:Name="btnBorrar" Content="Borrar" HorizontalAlignment="Left" Margin="460,344,0,0" VerticalAlignment="Top" Height="25" Width="96" Click="Button_Click"/>
 
     </Grid>
 </Window>

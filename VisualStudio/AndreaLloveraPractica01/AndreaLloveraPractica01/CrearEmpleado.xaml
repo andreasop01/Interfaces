@@ -18,7 +18,7 @@
         <Button x:Name="btnCrear" Content="Crear" HorizontalAlignment="Left" Margin="165,359,0,0" VerticalAlignment="Top" Height="29" Width="82" Click="Button_Click"/>
         <Button x:Name="btnCancelar" Content="Cancelar" HorizontalAlignment="Center" Margin="0,356,0,0" VerticalAlignment="Top" Height="32" Width="102" Click="Button_Click_1"/>
         <Button Content="Selecciona una Imagen" HorizontalAlignment="Left" Margin="144,302,0,0" VerticalAlignment="Top" Height="30" Width="163" Click="Button_Click_2"/>
-        <TextBox x:Name="txtImg" HorizontalAlignment="Left" Margin="337,302,0,0" TextWrapping="Wrap" Text="{Binding Path=RutaImg,NotifyOnValidationError=True,ValidatesOnDataErrors=True }" VerticalAlignment="Top" Width="204" Height="24" RenderTransformOrigin="0.47,0.097"/>
+        <TextBox x:Name="txtImg" HorizontalAlignment="Left" Margin="337,302,0,0" TextWrapping="Wrap" Validation.Error="Validation_Error" Text="{Binding Path=RutaImg,NotifyOnValidationError=True,ValidatesOnDataErrors=True }" VerticalAlignment="Top" Width="204" Height="24" RenderTransformOrigin="0.47,0.097"/>
         <Image x:Name="imgT" HorizontalAlignment="Left" Height="100" Margin="623,256,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
